@@ -17,13 +17,13 @@ page_soup = soup(page_html, "html.parser")
 test = page_soup.findAll("tbody", {"class":"athletes"})
 t = test[0]
 
-index = range(2,9)
-stats = {2:'AB', 3: 'R', 4: 'H', 5:'RBI', 6:'BB', 7:'K', 8:'AVG', 9:'OBP', 8:'SLG'}
+index = [2,3,4,5,6,7,9,10,11]
+stats = {2:'AB', 3: 'R', 4: 'H', 5:'RBI', 6:'BB', 7:'K', 9:'AVG', 10:'OBP', 11:'SLG'}
 
 
 # for t in stats:
 print(t.span.contents[0])
 for x in index:
-    print(t.tr.contents[x].text)
+    print(t.tr.contents[x].text, end=' ')
     print(stats[x])
-    
+
