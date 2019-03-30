@@ -33,38 +33,25 @@ headers = "Player Name, AB, R, H, RBI, BB, K, AVG, OBP, SLG\n"
 f.write(headers)
 
 # for y in range(0, range_end):
-for x, y in itertools.product((2, 12), range(0, range_end)):
+for y in range(0, range_end):
 
     player = test[y]
 # for t in stats:
     print(player.span.contents[0])
-    f.write(player.span.contents[0] + " , ") # + "\n")
+    f.write(player.span.contents[0] + " , ")
     for x in index:
         f.write(player.tr.contents[x].text + ", ")
-    f.write("\n")
-    #if x == 11:
-        #f.write(player.tr.contents[x] + "\n")
-        #if x == 11:
-         #   f.write("\n")
-
-
-"""
-    for x in index:
-        number = (player.tr.contents[x].text)
-        print(number, end=' ')
+        print(player.tr.contents[x].text, end=' ')
         print(stats[x])
-        # f.write(player.span.contents[0])
-        # f.write(" , ")
-        # f.write(number)
-        # f.write(" , ")
-        # f.write(" , ")
-        # if number == player.tr.contents[11]:
-            #f.write("\n")
-        #f.write(stats[x])
 
-        #f.write(Player_Name + "" + AB + "" + R + "" + H + "" + RBI + "" + BB + "" + K + "" + AVG + "" + OBP + "" + SLG + "\n")
+    f.write("\n")
+    print("")
 
-    #print("")
-    #f.write(Player_Name + "" + AB + "" + R + "" + H + "" + RBI + "" + BB + "" + K + "" + AVG + "" + OBP + "" + SLG + "\n")
-#"""
+
+for x in index:
+    print(player.tr.contents[x].text, end=' ')
+    print(stats[x])
+
+    print("")
+
 f.close()
