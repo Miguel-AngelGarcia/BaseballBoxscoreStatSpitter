@@ -47,11 +47,4 @@ for y in range(0, range_end):
     f.write("\n")
     print("")
 
-
-for x in index:
-    print(player.tr.contents[x].text, end=' ')
-    print(stats[x])
-
-    print("")
-
 f.close()
